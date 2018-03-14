@@ -3,8 +3,6 @@ package com.lemelo.servicos;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
-import com.lemelo.utils.MyDates;
-import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,7 +15,6 @@ import static com.lemelo.utils.MyDates.getDataDiferente;
 import static com.lemelo.utils.MyDates.isDataIgual;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
 
 public class NegociacaoServiceTest {
