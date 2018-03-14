@@ -5,11 +5,13 @@ import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
 import com.lemelo.exceptions.DepositoException;
 import com.lemelo.exceptions.ProdutoSemEstoqueException;
+import com.lemelo.utils.MyDates;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +20,7 @@ import static com.lemelo.utils.MyDates.isDataIgual;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class NegociacaoServiceTest {
@@ -37,6 +40,8 @@ public class NegociacaoServiceTest {
 
     @Test
     public void deveVenderProduto() throws Exception {
+        Assume.assumeFalse(MyDates.validarDiaSemana(new Date(), Calendar.SATURDAY));
+
         //cenario
         Usuario usuario = new Usuario("Usuario Um");
         List<Produto> produtos = Arrays.asList(new Produto("Produto Um", 1, 5.0));
@@ -165,5 +170,23 @@ public class NegociacaoServiceTest {
         //verificacao
         //4.0+4.0+3.0+2.0+1.0+0.0=14.0
         assertThat(resultado.getValor(), is(14.0));
+    }
+
+    @Test
+    public void deveDevolverNaSegundaAoComprarNoSabado() throws ProdutoSemEstoqueException, DepositoException {
+        Assume.assumeTrue(MyDates.validarDiaSemana(new Date(), Calendar.SATURDAY));
+
+        //cenario
+        Usuario usuario = new Usuario("Usuario 1");
+        List<Produto> produtos = Arrays.asList(
+                new Produto("Produto 1", 2, 5.0)
+        );
+
+        //acao
+        Negociacao devolucao = service.venderProduto(usuario, produtos);
+
+        //verificacao
+        boolean ehSegunda = MyDates.validarDiaSemana(devolucao.getDataDevolucao(), Calendar.MONDAY);
+        assertTrue(ehSegunda);
     }
 }

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="914595fb-3332-433e-9520-6e760e1ad493" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculoValorNegociacaoTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lemelo/servicos/NegociacaoService.class" afterPath="$PROJECT_DIR$/target/classes/com/lemelo/servicos/NegociacaoService.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lemelo/servicos/NegociacaoServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/lemelo/servicos/NegociacaoServiceTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NegociacaoService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NegociacaoService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="382">
+              <caret line="60" column="66" lean-forward="false" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,14 +32,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NegociacaoServiceTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalculoValorNegociacaoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculoValorNegociacaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#2354#2355#0" expanded="true" />
+                <element signature="e#2405#2406#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NegociacaoServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="166" column="51" lean-forward="true" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+            <state relative-caret-position="382">
+              <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +104,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/NaoPodeDividirPorZeroException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculadoraTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculoValorNegociacaoTest.java" />
       </list>
     </option>
   </component>
@@ -163,24 +183,6 @@
               <item name="myjunitv1" type="b2602c69:ProjectViewProjectNode" />
               <item name="myjunitv1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lemelo" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myjunitv1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myjunitv1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lemelo" type="462c0819:PsiDirectoryNode" />
-              <item name="servicos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myjunitv1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myjunitv1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -236,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in myjunitv1">
+  <component name="RunManager" selected="JUnit.CalculoValorNegociacaoTest">
     <configuration name="NegociacaoServiceTest.teste" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -292,6 +294,31 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="CalculoValorNegociacaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.lemelo.servicos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="myjunitv1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.lemelo.servicos" />
+      <option name="MAIN_CLASS_NAME" value="com.lemelo.servicos.CalculoValorNegociacaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -363,14 +390,16 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Android JUnit.NegociacaoServiceTest.teste" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in myjunitv1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculoValorNegociacaoTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in myjunitv1" />
-        <item index="1" class="java.lang.String" itemvalue="Android JUnit.NegociacaoServiceTest.teste" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CalculoValorNegociacaoTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in myjunitv1" />
+        <item index="2" class="java.lang.String" itemvalue="Android JUnit.NegociacaoServiceTest.teste" />
       </list>
     </recent_temporary>
   </component>
@@ -402,39 +431,46 @@
       <option name="project" value="LOCAL" />
       <updated>1521036493860</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implementando TDD">
+      <created>1521039200191</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521039200191</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 18m 26s.xml">
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 14h 26m 35s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 22m 34s.xml">
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 14h 27m 32s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 36m 44s.xml">
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 14h 30m 32s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 39m 33s.xml">
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 14h 59m 56s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 40m 34s.xml">
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 15h 00m 21s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 45m 00s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    <history-entry file="CalculoValorNegociacaoTest - 2018.03.14 at 15h 01m 04s.xml">
+      <configuration name="CalculoValorNegociacaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 45m 35s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    <history-entry file="CalculoValorNegociacaoTest - 2018.03.14 at 15h 08m 52s.xml">
+      <configuration name="CalculoValorNegociacaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 48m 00s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    <history-entry file="CalculoValorNegociacaoTest - 2018.03.14 at 15h 09m 59s.xml">
+      <configuration name="CalculoValorNegociacaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 49m 42s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    <history-entry file="CalculoValorNegociacaoTest - 2018.03.14 at 15h 10m 36s.xml">
+      <configuration name="CalculoValorNegociacaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 11h 52m 20s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    <history-entry file="CalculoValorNegociacaoTest - 2018.03.14 at 15h 13m 45s.xml">
+      <configuration name="CalculoValorNegociacaoTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -449,7 +485,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5030441" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39498433" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39498433" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,7 +524,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39498433" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39498433" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2678843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -503,7 +539,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Seguindo em frente" />
     <MESSAGE value="Criado um teste de calculadora" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criado um teste de calculadora" />
+    <MESSAGE value="Implementando TDD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando TDD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -548,8 +585,8 @@
         <state relative-caret-position="34">
           <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,10 +707,10 @@
         <state relative-caret-position="255">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="false" />
+            <element signature="e#182#183#0" expanded="false" />
+            <element signature="e#223#224#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,9 +720,9 @@
         <state relative-caret-position="1003">
           <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#265#266#0" expanded="false" />
+            <element signature="e#305#306#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -698,23 +735,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="166" column="51" lean-forward="true" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+        <state relative-caret-position="382">
+          <caret line="60" column="66" lean-forward="false" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
           <folding>
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculoValorNegociacaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="59">
+          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#2354#2355#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding>
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
           </folding>
         </state>
       </provider>

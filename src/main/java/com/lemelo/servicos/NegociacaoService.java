@@ -7,6 +7,7 @@ import com.lemelo.exceptions.DepositoException;
 import com.lemelo.exceptions.ProdutoSemEstoqueException;
 import com.lemelo.utils.MyDates;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -55,6 +56,10 @@ public class NegociacaoService {
         Date dataDevolucao = new Date();
         dataDevolucao = MyDates.aumentaDias(dataDevolucao, 1);
         negociacao.setDataDevolucao(dataDevolucao);
+
+        if(MyDates.validarDiaSemana(dataDevolucao, Calendar.SUNDAY)) {
+            dataDevolucao = MyDates.aumentaDias(dataDevolucao, 1);
+        }
 
         return negociacao;
     }
