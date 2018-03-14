@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="914595fb-3332-433e-9520-6e760e1ad493" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/DepositoException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/ProdutoSemEstoqueException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/OrdemTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/NaoPodeDividirPorZeroException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/Calculadora.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculadoraTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemelo/entidades/Negociacao.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/entidades/Negociacao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lemelo/entidades/Negociacao.class" afterPath="$PROJECT_DIR$/target/classes/com/lemelo/entidades/Negociacao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lemelo/servicos/NegociacaoService.class" afterPath="$PROJECT_DIR$/target/classes/com/lemelo/servicos/NegociacaoService.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lemelo/servicos/NegociacaoServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/lemelo/servicos/NegociacaoServiceTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,67 +18,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NegociacaoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java">
+      <file leaf-file-name="CalculadoraTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculadoraTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="1003">
+              <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Negociacao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/entidades/Negociacao.java">
+      <file leaf-file-name="NaoPodeDividirPorZeroException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/NaoPodeDividirPorZeroException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#576#577#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Produto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/entidades/Produto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NegociacaoServiceTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java">
+      <file leaf-file-name="Calculadora.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/Calculadora.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdemTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/OrdemTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#154#155#0" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,6 +99,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lemelo/entidades/Negociacao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/NegociacaoService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/NaoPodeDividirPorZeroException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lemelo/servicos/Calculadora.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculadoraTest.java" />
       </list>
     </option>
   </component>
@@ -217,6 +187,15 @@
               <item name="myjunitv1" type="b2602c69:ProjectViewProjectNode" />
               <item name="myjunitv1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lemelo" type="462c0819:PsiDirectoryNode" />
+              <item name="servicos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myjunitv1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myjunitv1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -254,6 +233,10 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.lemelo.exceptions" />
+      <recent name="com.lemelo.servicos" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -420,37 +403,45 @@
       <option name="presentableId" value="Default" />
       <updated>1520981699091</updated>
     </task>
+    <task id="LOCAL-00001" summary="Seguindo em frente">
+      <created>1521034152202</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521034152203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 27m 30s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 29m 53s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 36m 07s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 37m 26s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 38m 22s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 39m 28s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 40m 14s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 41m 15s.xml">
-      <configuration name="All in myjunitv1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_myjunitv1 - 2018.03.14 at 09h 41m 53s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 15m 21s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 29m 43s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 35m 45s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 36m 53s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 43m 41s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 46m 52s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 51m 04s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 53m 26s.xml">
+      <configuration name="All in myjunitv1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myjunitv1 - 2018.03.14 at 10h 56m 27s.xml">
       <configuration name="All in myjunitv1" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -466,7 +457,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39498433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39498433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,6 +479,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Seguindo em frente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seguindo em frente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -661,11 +656,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/NegociacaoServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
             <element signature="e#966#967#0" expanded="true" />
             <element signature="e#1015#1016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/exceptions/NaoPodeDividirPorZeroException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lemelo/servicos/Calculadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lemelo/servicos/CalculadoraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
           </folding>
         </state>
       </provider>
