@@ -33,8 +33,21 @@ public class NegociacaoService {
         negociacao.setUsuario(usuario);
         negociacao.setDataNegociacao(new Date());
         Double valorTotal = 0d;
-        for (Produto produto : produtos) {
-            valorTotal += produto.getPrecoNegociacao();
+        for (int i=0; i<produtos.size(); i++) {
+            Produto produto = produtos.get(i);
+            Double valorProduto = produto.getPrecoNegociacao();
+            switch (i) {
+                case 2: valorProduto = valorProduto * 0.75;
+                    break;
+                case 3: valorProduto = valorProduto * 0.50;
+                    break;
+                case 4: valorProduto = valorProduto * 0.25;
+                    break;
+                case 5: valorProduto = 0d;
+                    break;
+            }
+
+            valorTotal += valorProduto;
         }
         negociacao.setValor(valorTotal);
 
