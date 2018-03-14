@@ -8,7 +8,13 @@ import com.lemelo.utils.MyDates;
 import java.util.Date;
 
 public class NegociacaoService {
-    public Negociacao venderProduto(Usuario usuario, Produto produto) {
+
+    public Negociacao venderProduto(Usuario usuario, Produto produto) throws Exception {
+
+        if(produto.getEstoque() == 0) {
+            throw new Exception("Produto sem estoque");
+        }
+
         Negociacao negociacao = new Negociacao();
         negociacao.setProduto(produto);
         negociacao.setUsuario(usuario);
