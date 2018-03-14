@@ -58,6 +58,7 @@ public class NegociacaoServiceTest {
 //        }
     }
 
+    //Elegante
     @Test(expected = Exception.class)
     public void testNegociacao_produtoSemEstoque() throws Exception {
         //cenario
@@ -69,6 +70,7 @@ public class NegociacaoServiceTest {
         service.venderProduto(usuario, produto);
     }
 
+    //Robusto
     @Test
     public void testNegociacao_produtoSemEstoque_2() {
         //cenario
@@ -85,6 +87,7 @@ public class NegociacaoServiceTest {
         }
     }
 
+    //Nova forma
     @Test
     public void testNegociacao_produtoSemEstoque_3() throws Exception {
         //cenario
