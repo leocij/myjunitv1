@@ -3,23 +3,40 @@ package com.lemelo.servicos;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
+import com.lemelo.exceptions.DepositoException;
+import com.lemelo.exceptions.ProdutoSemEstoqueException;
 import com.lemelo.utils.MyDates;
 
 import java.util.Date;
+import java.util.List;
 
 public class NegociacaoService {
 
-    public Negociacao venderProduto(Usuario usuario, Produto produto) throws Exception {
+    public Negociacao venderProduto(Usuario usuario, List<Produto> produtos) throws ProdutoSemEstoqueException, DepositoException {
 
-        if(produto.getEstoque() == 0) {
-            throw new Exception("Produto sem estoque");
+        if (usuario == null) {
+            throw new DepositoException("Usuário vazio");
+        }
+
+        if (produtos == null || produtos.isEmpty()) {
+            throw new DepositoException("Produto vazio");
+        }
+
+        for (Produto produto : produtos) {
+            if(produto.getEstoque() == 0) {
+                throw new ProdutoSemEstoqueException();
+            }
         }
 
         Negociacao negociacao = new Negociacao();
-        negociacao.setProduto(produto);
+        negociacao.setProdutos(produtos);
         negociacao.setUsuario(usuario);
         negociacao.setDataNegociacao(new Date());
-        negociacao.setValor(produto.getPrecoNegociacao());
+        Double valorTotal = 0d;
+        for (Produto produto : produtos) {
+            valorTotal += produto.getPrecoNegociacao();
+        }
+        negociacao.setValor(valorTotal);
 
         //Devolucao no dia seguinte
         Date dataDevolucao = new Date();

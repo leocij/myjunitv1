@@ -3,21 +3,26 @@ package com.lemelo.servicos;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
-import org.junit.Assert;
-import org.junit.Rule;
-import org.junit.Test;
+import com.lemelo.exceptions.DepositoException;
+import com.lemelo.exceptions.ProdutoSemEstoqueException;
+import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static com.lemelo.utils.MyDates.getDataDiferente;
 import static com.lemelo.utils.MyDates.isDataIgual;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 public class NegociacaoServiceTest {
+
+    private NegociacaoService service;
 
     @Rule
     public ErrorCollector error = new ErrorCollector();
@@ -25,77 +30,62 @@ public class NegociacaoServiceTest {
     @Rule
     public ExpectedException exception = ExpectedException.none();
 
+    @Before
+    public void inicio() {
+        service = new NegociacaoService();
+    }
+
     @Test
     public void testeNegociacao() throws Exception {
         //cenario
-        NegociacaoService service = new NegociacaoService();
         Usuario usuario = new Usuario("Usuario Um");
-        Produto produto = new Produto("Produto Um", 2, 5.0);
+        List<Produto> produtos = Arrays.asList(new Produto("Produto Um", 1, 5.0));
 
         //acao
-        Negociacao negociacao = service.venderProduto(usuario, produto);
+        Negociacao negociacao = service.venderProduto(usuario, produtos);
 
         //verificacao
-        error.checkThat( negociacao.getValor(), is(equalTo(5.0)));
+        error.checkThat(negociacao.getValor(), is(equalTo(5.0)));
         error.checkThat(isDataIgual(negociacao.getDataNegociacao(), new Date()), is(true));
         error.checkThat(isDataIgual(negociacao.getDataDevolucao(), getDataDiferente(1)), is(true));
-
-//        //acao
-//        Negociacao negociacao = null;
-//        try {
-//            negociacao = service.venderProduto(usuario, produto);
-//
-//            //verificacao
-//            error.checkThat( negociacao.getValor(), is(equalTo(5.0)));
-//            error.checkThat(isDataIgual(negociacao.getDataNegociacao(), new Date()), is(true));
-//            error.checkThat(isDataIgual(negociacao.getDataDevolucao(), getDataDiferente(1)), is(true));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            Assert.fail("Não deveria lançar exceção");
-//        }
     }
 
     //Elegante
-    @Test(expected = Exception.class)
+    @Test(expected = ProdutoSemEstoqueException.class)
     public void testNegociacao_produtoSemEstoque() throws Exception {
         //cenario
-        NegociacaoService service = new NegociacaoService();
         Usuario usuario = new Usuario("Usuario Um");
-        Produto produto = new Produto("Produto Um", 0, 5.0);
+        List<Produto> produtos = Arrays.asList(new Produto("Produto Um", 0, 4.0));
 
         //acao
-        service.venderProduto(usuario, produto);
+        service.venderProduto(usuario, produtos);
     }
 
-    //Robusto
+    //Robusta
     @Test
-    public void testNegociacao_produtoSemEstoque_2() {
+    public void testNegociacao_usuarioVazio() throws ProdutoSemEstoqueException {
         //cenario
-        NegociacaoService service = new NegociacaoService();
-        Usuario usuario = new Usuario("Usuario Um");
-        Produto produto = new Produto("Produto Um", 0, 5.0);
+        List<Produto> produtos = Arrays.asList(new Produto("Produto Um", 1, 5.0));
 
         //acao
         try {
-            service.venderProduto(usuario, produto);
-            Assert.fail("Deveria ter lançado uma exceção");
-        } catch (Exception e) {
-            assertThat(e.getMessage(), is("Produto sem estoque"));
+            service.venderProduto(null, produtos);
+            fail();
+        } catch (DepositoException e) {
+            assertThat(e.getMessage(), is("Usuário vazio"));
         }
     }
 
-    //Nova forma
+    //Forma Nova
     @Test
-    public void testNegociacao_produtoSemEstoque_3() throws Exception {
+    public void testNegociacao_produtoVazio() throws ProdutoSemEstoqueException, DepositoException {
         //cenario
-        NegociacaoService service = new NegociacaoService();
         Usuario usuario = new Usuario("Usuario Um");
-        Produto produto = new Produto("Produto Um", 0, 5.0);
 
-        exception.expect(Exception.class);
-        exception.expectMessage("Produto sem estoque");
+        exception.expect(DepositoException.class);
+        exception.expectMessage("Produto vazio");
 
         //acao
-        service.venderProduto(usuario, produto);
+        service.venderProduto(usuario, null);
     }
 }

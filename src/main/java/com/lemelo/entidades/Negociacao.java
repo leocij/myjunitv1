@@ -1,10 +1,11 @@
 package com.lemelo.entidades;
 
 import java.util.Date;
+import java.util.List;
 
 public class Negociacao {
     private Usuario usuario;
-    private Produto produto;
+    private List<Produto> produtos;
     private Date dataNegociacao;
     private Date dataDevolucao;
     private Double valor;
@@ -17,12 +18,12 @@ public class Negociacao {
         this.usuario = usuario;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public List<Produto> getProdutos() {
+        return produtos;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
     }
 
     public Date getDataNegociacao() {
