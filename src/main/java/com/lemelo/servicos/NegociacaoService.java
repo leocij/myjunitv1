@@ -1,17 +1,23 @@
 package com.lemelo.servicos;
 
+import com.lemelo.dados.NegociacaoDAO;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
 import com.lemelo.exceptions.DepositoException;
 import com.lemelo.exceptions.ProdutoSemEstoqueException;
 import com.lemelo.utils.MyDates;
+import com.sun.org.apache.xpath.internal.operations.Neg;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 public class NegociacaoService {
+
+    private NegociacaoDAO dao;
+    private SPCService spcService;
+    private EmailService emailService;
 
     public Negociacao venderProduto(Usuario usuario, List<Produto> produtos) throws ProdutoSemEstoqueException, DepositoException {
 
@@ -27,6 +33,10 @@ public class NegociacaoService {
             if(produto.getEstoque() == 0) {
                 throw new ProdutoSemEstoqueException();
             }
+        }
+
+        if(spcService.possuiNegativacao(usuario)) {
+            throw new DepositoException("Usuário Negativado");
         }
 
         Negociacao negociacao = new Negociacao();
@@ -61,6 +71,27 @@ public class NegociacaoService {
             dataDevolucao = MyDates.aumentaDias(dataDevolucao, 1);
         }
 
+        dao.salvar(negociacao);
+
         return negociacao;
+    }
+
+    public void notificarAtrasos() {
+        List<Negociacao>  negociacaos = dao.obterNegociacoesPendentes();
+        for(Negociacao negociacao : negociacaos) {
+            emailService.notificarAtraso(negociacao.getUsuario());
+        }
+    }
+
+    public void setNegociacaoDAO(NegociacaoDAO dao) {
+        this.dao = dao;
+    }
+
+    public void setSPCService(SPCService spc) {
+        spcService = spc;
+    }
+
+    public void setEmailService(EmailService email) {
+        emailService = email;
     }
 }

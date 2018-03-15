@@ -1,6 +1,9 @@
 package com.lemelo.servicos;
 
+import com.lemelo.builders.NegociacaoBuilder;
 import com.lemelo.builders.ProdutoBuilder;
+import com.lemelo.dados.NegociacaoDAO;
+import com.lemelo.dados.NegociacaoDAOFake;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
@@ -10,20 +13,24 @@ import com.lemelo.utils.MyDates;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
+import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import static com.lemelo.builders.NegociacaoBuilder.umNegociacao;
 import static com.lemelo.builders.ProdutoBuilder.umProduto;
 import static com.lemelo.builders.ProdutoBuilder.umProdutoSemEstoque;
 import static com.lemelo.builders.UsuarioBuilder.umUsuario;
 import static com.lemelo.matchers.MatchersProprios.*;
+import static com.lemelo.utils.MyDates.getDataDiferente;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
+import static org.mockito.Mockito.when;
 
 public class NegociacaoServiceTest {
 
@@ -35,9 +42,19 @@ public class NegociacaoServiceTest {
     @Rule
     public ExpectedException exception = ExpectedException.none();
 
+    private SPCService spc;
+    private NegociacaoDAO dao;
+    private EmailService email;
+
     @Before
     public void inicio() {
         service = new NegociacaoService();
+        dao = Mockito.mock(NegociacaoDAO.class);
+        service.setNegociacaoDAO(dao);
+        spc = Mockito.mock(SPCService.class);
+        service.setSPCService(spc);
+        email = Mockito.mock(EmailService.class);
+        service.setEmailService(email);
     }
 
     @Test
@@ -110,4 +127,47 @@ public class NegociacaoServiceTest {
         //verificacao
         assertThat(devolucao.getDataDevolucao(), caiNumaSegunda());
     }
+
+    @Test
+    public void naoDeveVenderProdutoParaNegativadoSPC() throws ProdutoSemEstoqueException, DepositoException {
+        //cenario
+        Usuario usuario = umUsuario().agora();
+        //Usuario usuario2 = umUsuario().comNome("Usario 2").agora();
+        List<Produto> produtos = Arrays.asList(umProduto().agora());
+
+        when(spc.possuiNegativacao(usuario)).thenReturn(true);
+
+        //acao
+        try {
+            service.venderProduto(usuario, produtos);
+
+        //verificacao
+            Assert.fail();
+        }catch (DepositoException e) {
+            Assert.assertThat(e.getMessage(), is("Usuário Negativado"));
+        }
+
+
+        Mockito.verify(spc).possuiNegativacao(usuario);
+    }
+
+    @Test
+    public void deveEnviarEmailParaDevolucoesAtrasadas() {
+        //cenario
+        Usuario usuario = umUsuario().agora();
+        List<Negociacao> negociacaos = Arrays.asList(
+                umNegociacao()
+                        .comUsuario(usuario)
+                        .comDataDevolucao(getDataDiferente(2))
+                        .agora());
+
+        when(dao.obterNegociacoesPendentes()).thenReturn(negociacaos);
+
+        //acao
+        service.notificarAtrasos();
+
+        //verificacao
+        Mockito.verify(email).notificarAtraso(usuario);
+    }
+
 }

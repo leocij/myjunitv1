@@ -1,5 +1,7 @@
 package com.lemelo.servicos;
 
+import com.lemelo.dados.NegociacaoDAO;
+import com.lemelo.dados.NegociacaoDAOFake;
 import com.lemelo.entidades.Negociacao;
 import com.lemelo.entidades.Produto;
 import com.lemelo.entidades.Usuario;
@@ -10,6 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -29,9 +33,16 @@ public class CalculoValorNegociacaoTest {
     public String cenario;
 
     private NegociacaoService service;
+
+    private SPCService spc;
+
     @Before
     public void inicio() {
         service = new NegociacaoService();
+        NegociacaoDAO dao = Mockito.mock(NegociacaoDAO.class);
+        service.setNegociacaoDAO(dao);
+        spc = Mockito.mock(SPCService.class);
+        service.setSPCService(spc);
     }
 
     private static Produto produto1 = umProduto().agora();
